@@ -23,7 +23,7 @@ fun main(args: Array<String>) {
 ```
 4. declare and create a list / named argument
 
-You can also find the familiar syntax of named argument in Python.
+   You can also find the familiar syntax of named argument in Python.
 ```
 val persons = listOf(Person("Alice"),
                         Person("Bob", age = 29) // -> in this case, 'age = 29' is a named argument.
