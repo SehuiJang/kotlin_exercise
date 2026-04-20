@@ -2,6 +2,8 @@
 Chapter 1.1 A taste of Kotlin
 
 # What did I look?
+Well, we briefly look at a few concepts in this code.
+
 1. defining a data class
 ```
 data class Person(val name: String, 
@@ -27,7 +29,7 @@ val persons = listOf(Person("Alice"),
 ```
 5. lambda expression and elvis operator(?:)
 ```
-// Especially, this might be Trailing Lambda: if the last argument of a function is lambda expression, you can move the lambda outside parenthesis
+// Especially, this might be Training Lambda: if the last argument of a function is lambda expression, you can move the lambda outside parenthesis
 // keyword 'it': when a lambda has only one parameter, you can omit the parameter declaration and refer to the argument using 'it'.
 
 val oldest = persons.maxBy { it.age ?: 0 } 
