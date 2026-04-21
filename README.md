@@ -12,7 +12,7 @@ This repo is just for exercising kotlin (not for developing Android app), and th
 ### 1. Installing file
 Link
    - open JDK: https://openjdk.org/
-   - Oracle JDK(What I selected): https://www.oracle.com/java/technologies/downloads/
+   - Oracle JDK(WHAT I SELECTED): https://www.oracle.com/java/technologies/downloads/
 
 I selected 'Windows -> x64 Installer'.  
 You'll get an .exe file, and your files would be installed at 'C:/Program Files/Java/jdk-24'(default).  
