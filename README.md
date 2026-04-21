@@ -2,8 +2,8 @@ THIS IS MARKDOWN FILE AS TO VSCODE SETTING FOR KOTLIN.
 
 # Step
 You need to install:
-1. Java
-2. Kotlin Compiler
+1. Java -> I've installed ```24.0.1```.
+2. Kotlin Compiler -> I've installed ```kotlinc-jvm 2.3.20```.
 3. Code Runner in VSCode, Kotlin Language Extension
 
 This repo is just for exercising kotlin (not for developing Android app), and thus I've chosen VSCode rather than Android Studio. It is because VSCode is lighter than Android Studio.
