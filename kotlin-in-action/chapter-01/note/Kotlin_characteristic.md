@@ -139,7 +139,7 @@ Running on JVM already provides safety guarantees:
 - Preventing other problems from incorrect use of dynamically allocated memory
 - ...
 
-In addition, Kotlin ensures the type safety, and it comes at a smaller cost than with Java.
+In addition, Kotlin ensures the type safety, and it comes at a smaller cost (simpler syntax) than with Java.
 - It is not necessary to specify all the type declarations.
 - The compiler infers the types.
 
