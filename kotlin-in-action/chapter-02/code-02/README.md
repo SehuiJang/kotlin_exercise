@@ -71,7 +71,7 @@ fun max3(a: Int, b: Int) = if (a > b) a else b
   - You have to write the `return` statements.
 ### 2. Expression-body function
   - **You can omit the return type**.
-  - _**Type inference**_: In this case, the compiler checks the expression and infer its type.
+  - _**Type inference**_: In this case, the compiler checks the expression and infers its type.
     - Its type is used as the return type.
 
 
