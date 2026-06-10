@@ -1,5 +1,8 @@
 THIS IS MARKDOWN FILE AS TO VSCODE SETTING FOR KOTLIN.  
 
+If you have trouble installing and setting VSCode, you can consider the online playground - https://try.kotl.in/
+
+
 # Step
 You need to install:
 1. Java -> I've installed ```24.0.1```.
