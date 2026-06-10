@@ -47,21 +47,25 @@ Unzip the .zip file, and find the folder 'bin'.
 
 ### 2. Setting environmental variable
 Don't forget to set the system environment variable in the same way as in the case of JDK!  
-Type the path to folder 'bin'.
+Type the path to folder 'bin'.  
+
 ![img6](./vscode-kotlin-setting-imgs/6.png)
 
 ### 3. Check the version of Kotlin Compiler
-In the same manner as in JDK, you can check whether Kotlin Compiler (kotlinc) is installed successfully, typing 'kotlinc -version' into 'cmd'.
+In the same manner as in JDK, you can check whether Kotlin Compiler (kotlinc) is installed successfully, typing 'kotlinc -version' into 'cmd'.  
+
 ![img7](./vscode-kotlin-setting-imgs/7.png)
 
 ## Installing Code Runner in VSCode, Kotlin Language Extension
 Now, let's turn on VSCode to install two extensions.
 ### 1. Code Runner
-This extension is helpful in that it allows you to easily run various programming languages (including Kotlin) and check the results.
+This extension is helpful in that it allows you to easily run various programming languages (including Kotlin) and check the results.  
+
 ![img8](./vscode-kotlin-setting-imgs/8.png)
 
 ### 2. Kotlin Language Extension
-It features syntax highlighting, code snippets, and region code folding.
+It features syntax highlighting, code snippets, and region code folding.  
+
 ![img9](./vscode-kotlin-setting-imgs/9.png)
 
 ### 3. Setting Code Runner in VSCode
@@ -75,7 +79,8 @@ Please add key "kotlin" and its corresponding value:
 
 ## Execute a simple Kotlin code
 Create a new `.kt` file, and then write down the following code.  
-Now, click the button 'Run Code' or use shortcut ctrl+alt+n.
+Now, click the button 'Run Code' or use shortcut ctrl+alt+n.  
+
 ![img12](./vscode-kotlin-setting-imgs/12.png)
 
 If being successful, you can look at a few lines of output, as follows:
