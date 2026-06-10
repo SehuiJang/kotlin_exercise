@@ -7,7 +7,7 @@ var answer6: Int = -12  // Top-level declaration requires an initializer.
 fun main() {
     // Immutable reference
 
-    {   // Scope 1
+    run {   // Scope 1
         val question = "The Ultimate Question of Life, the Universe, and Everything"
 
         val answer1 = 42
@@ -16,12 +16,12 @@ fun main() {
         val yearsToCompute = 7.5e6
     }
 
-    {   // Scope 2
+    run {   // Scope 2
         val answer3: Int    // When a variable has no initializer, you have to specify its type.
         answer3 = 42
     }
 
-    {   // Scope 3
+    run {   // Scope 3
         val message: String // Initialization depending on some condition
         val success = true
         if (success)
@@ -34,7 +34,7 @@ fun main() {
         println(message)
     }
     
-    {   // Scope 4
+    run {   // Scope 4
         val languages = arrayListOf("Java")
         languages.add("Kotlin")
     }
@@ -43,7 +43,7 @@ fun main() {
 
     // Mutable reference
 
-    {   // Scope 5
+    run {   // Scope 5
         var ans = 17
         // ans = "no answer"   // Error: type mismatch
         ans = 20
