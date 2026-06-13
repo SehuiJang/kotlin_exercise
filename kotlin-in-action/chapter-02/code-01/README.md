@@ -1,5 +1,5 @@
 # What chapter in 'Kotlin in Action'?
-Chapter 2.1.1 Hello, World!
+Chapter 2.1.1 Hello, World! (MEAP version)
 
 # What did I look?
 This is just a simple program printing a message "Hello, world".  
