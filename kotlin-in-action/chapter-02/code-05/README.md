@@ -163,5 +163,6 @@ If you want to make use of `field` through accessors, the property must be initi
 On a side note, there are two ways:
   - declaring a function without arguments, which acts like a property getter.
   - declaring a property with custom getter.
+
 There is no difference in terms of implementation and performance.  
 The difference is just in readability.
