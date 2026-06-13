@@ -1,5 +1,5 @@
 # What chapter in 'Kotlin in Action'?
-Chapter 2.1.2 Functions
+Chapter 2.1.2 Functions (MEAP version)
 
 # What did I look?
 The structure and form of functions!
