@@ -1,5 +1,5 @@
 # What chapter in 'Kotlin in Action'?
-Chapter 2.1.4 Easier string formatting: string templates
+Chapter 2.1.4 Easier string formatting: string templates (MEAP version)
 
 # What did I look?
 Kotlin-style string formatting!
