@@ -95,10 +95,10 @@ System.out.println(person.isMarried());
 ### Kotlin
 ```kotlin
 val person = Person("Bob", true)
-println(person.name)    // Bob, ivoking its getter
-println(person.isMarried)   // true, ivoking its getter
+println(person.name)    // Bob, invoking its getter
+println(person.isMarried)   // true, invoking its getter
 
-person.isMarried = false    // ivoking its setter
+person.isMarried = false    // invoking its setter
 println(person.isMarried)   // false
 ```
 - The constructor of `Person` can be called without the `new` keyword!
