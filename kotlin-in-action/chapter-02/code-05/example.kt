@@ -27,7 +27,7 @@ fun main() {
         println(person.name)    // Output: Bob
         println(person.isMarried)   // Output: true
 
-        person.isMarried = false    // ivoking its setter (trivial setter)
+        person.isMarried = false    // invoking its setter (trivial setter)
         println(person.isMarried)   // Output: false
     }
 
