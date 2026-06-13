@@ -157,6 +157,8 @@ class Example
 }
 ```
 
+If you want to make use of `field` through accessors, the property must be initialized.
+
 ### Misc.
 On a side note, there are two ways:
   - declaring a function without arguments, which acts like a property getter.
