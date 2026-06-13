@@ -1,5 +1,6 @@
 # What chapter in 'Kotlin in Action'?
-Chapter 2.1.3 Variables
+Chapter 2.1.3 Variables (MEAP version)  
+Chapter 2.1.5 (2/e version)
 
 # What did I look?
 Mutable & immutable variables!
