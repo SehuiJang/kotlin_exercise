@@ -1,6 +1,29 @@
 # What chapter in 'Kotlin in Action'?
 - Chapter 2.2.3 Directories and packages (2/e version)  
 
+---
+
+# Execution manual
+## 0. Prepare terminal
+Such as cmd, git bash, ...
+
+## 1. Go to the directory before compiling, using `cd`
+```bash
+cd C:/path/to/your/chapter-02/code-06
+```
+
+## 2. Compile & Execute your code
+Note that **you must compile a folder** rather than a single `.kt` file in this example folder.  
+Thus, take the following command:
+```bash
+C:/path/to/your/kotlinc ./geometry -include-runtime -d example.jar && java -jar example.jar
+```
+Then, you can see the message in console:
+```text
+false
+true
+```
+
 # What did I look?
 - `package` statement
 - `import` statement
