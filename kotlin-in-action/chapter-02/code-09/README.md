@@ -6,7 +6,7 @@
 - When the subject of `when` has the form of a variable, you can restrict the scope of it.
 
 ((((( Not completed.. )))))
-# Example1
+# Example code
 ## Execution script
 In your terminal, adjust the current path to this directory, utilizing `cd`:
 ```bash
