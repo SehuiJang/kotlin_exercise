@@ -38,7 +38,7 @@ fun main() {
 }
 ```
 - The function `getMnemonic` returns a `when` directly.
-  - Well, `when` is an **"expression"**, meaning that it has its value itself.
+  - Well, `when` is not a statement but an **"expression"**, meaning that it has its value itself.
   - Thus, `getMnemonic` can be implemented in the form of an expression-body function.
 - Depending on `color` value, `when` in the above example returns the corresponding string.
   - It is similar to `if`.
