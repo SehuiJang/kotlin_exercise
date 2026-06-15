@@ -10,9 +10,9 @@
 ## Execution script
 In your terminal, adjust the current path to this directory, utilizing `cd`:
 ```bash
-cd C:/path/to/your/chapter-02/code-08
+cd C:/path/to/your/chapter-02/code-09
 ```
 And then, compile and execute the code:
 ```bash
-C:/path/to/your/kotlinc ./examples/colors.kt ./examples/example1.kt -include-runtime -d example1.jar && java -jar example1.jar
+C:/path/to/your/kotlinc ./example/colors.kt ./example/example.kt -include-runtime -d example.jar && java -jar example.jar
 ```
