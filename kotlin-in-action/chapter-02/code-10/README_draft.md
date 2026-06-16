@@ -3,6 +3,7 @@
 
 # What did I look?
 - We can use any kind of object as a subject and a branch condition.
+- `when` expression has to be exhaustive.
 
 # Example code
 ## Execution script
