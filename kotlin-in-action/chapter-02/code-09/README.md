@@ -49,3 +49,8 @@ fun main() {
   - You can evaluate the subject **ONCE**.
   - And then, reuse it across the branches (without reevaluation).
   - At the same time, you can keep the captured variable, `color`, from interacting unnecessarily with variables outside the `when` expression.
+
+### `when` must be exhaustive!
+- Note that this when expression is _**exhaustive**_.
+- In the `when` expression of the above code, branches are defined for every possible value of the subject.
+  - In other words, *all possible paths* produce and return a value.
