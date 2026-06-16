@@ -6,7 +6,7 @@ fun getWarmthFromSensor() =
     when (val color = measureColor()) {
         RED, ORANGE, YELLOW -> "warm (red = ${color.r})"
         GREEN -> "neutral (green = ${color.g})"
-        BLUE, INDIGO, VIOLET -> "cold (blue = ${color.b}"
+        BLUE, INDIGO, VIOLET -> "cold (blue = ${color.b})"
     }
 
 fun main() {
