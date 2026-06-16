@@ -52,5 +52,5 @@ fun main() {
 
 ### `when` must be exhaustive!
 - Note that this when expression is _**exhaustive**_.
-- In the `when` expression of the above code, branches are defined for every possible value of the subject.
+  - In the `when` expression of the above code, branches are defined for every possible value of the subject. Thus, **it is exhaustive**.
   - In other words, *all possible paths* produce and return a value.
