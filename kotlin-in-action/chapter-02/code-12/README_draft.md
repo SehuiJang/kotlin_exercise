@@ -125,12 +125,15 @@ Well, the explicit cast (manual cast) is also possible but not required:
 ### Caution
 Briefly, smart cast works only when the compiler can be sure that the value remains the same after `is` check.
   - The compiler must be able to prove that the target of `is` check still refers to the same value afterward.
+
 Technically, remember that:
 ```text
 All properties of the class must be declared as val,
 and none of them must have custom accessors.
 ```
+
 ---
+
 #### `var` properties is not good when expecting smart cast
 If a class has one or more `var` properties, you cannot expect smart cast.
   - It is because the properties of instances of the class can be changed even after `is` check.
