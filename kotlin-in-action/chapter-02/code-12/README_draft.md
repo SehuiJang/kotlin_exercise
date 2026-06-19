@@ -33,18 +33,17 @@ class Sum(val left: Expr, val right: Expr) : Expr  // Declaring a class `Sum`, a
         }
     
         class Num {
-            +value: Int
+            +Int value
         }
     
         class Sum {
-            +left: Expr
-            +right: Expr
+            +Expr left
+            +Expr right
         }
     
-        Num ..|> Expr : implements
-        Sum ..|> Expr : implements
-        Sum --> Expr : left
-        Sum --> Expr : right
+        Num ..|> Expr
+        Sum ..|> Expr
+        Sum --> Expr : left, right
     ```
 - `class Num(val value: Int) : Expr` means:
   - Basically, you define a class `Num` with its immutable property `value`.
