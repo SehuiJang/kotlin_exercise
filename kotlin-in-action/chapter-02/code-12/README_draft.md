@@ -204,5 +204,5 @@ fun evalHolder(holder: Holder): Int {
 }
 ```
   - Here, the target of the smart cast is not `holder.expr` but the local variable `expr`!
-  - `expr` is `val` and does not vary in the function block.
+  - `expr` is `val` and does not vary in the function block and `if` block.
   - That's why the smart casting for `expr` is possible.
