@@ -113,7 +113,7 @@ Well, the explicit cast (manual cast) is also possible but not required:
     ```
 - The type of `e` is checked as `Sum` in the 2nd `if` branch.
   - Then, the compiler takes the cast for you.
-  - Accordingly, you can use `e` as `Num` object in the block **without the explicit cast**!!
+  - Accordingly, you can use `e` as `Sum` object in the block **without the explicit cast**!!
   - On a side note, the smart-cast value `e` in this block will be highlighted when you use IDE such as IntelliJ IDEA and Android Studio!
     ```
     if (e is Sum) {	// Type check
@@ -121,3 +121,85 @@ Well, the explicit cast (manual cast) is also possible but not required:
         return eval(e.right) + eval(e.left)
     }
     ```
+
+### Caution
+Briefly, smart cast works only when the compiler can be sure that the value remains the same after `is` check.
+  - The compiler must be able to prove that the target of `is` check still refers to the same value afterward.
+Technically, remember that:
+```text
+All properties of the class must be declared as val,
+and none of them must have custom accessors.
+```
+---
+#### `var` properties is not good when expecting smart cast
+If a class has one or more `var` properties, you cannot expect smart cast.
+  - It is because the properties of instances of the class can be changed even after `is` check.
+  - For instance, smart cast is not available in the following code:
+    ```kotlin
+    interface Expr
+    class Num(val value: Int) : Expr
+    class Sum(val left: Expr, val right: Expr) : Expr
+    
+    class Holder(
+        var expr: Expr
+    )
+    
+    fun evalHolder(holder: Holder): Int {
+        if (holder.expr is Num) {
+            // In this line, someone can convert `holder.expr` into `Sum` instance.
+            return holder.expr.value // smart cast is impossible!
+        }
+        return 0
+    }
+    ```
+
+#### Even though all properties are `val`, none of them must have custom accessor
+For properties with their custom accessors, reading the properties can produce a diffrent value each time.
+- For the following example, even if reading the folowing property once returns a `Num`, reading it again may return a `Sum`.
+    ```kotlin
+    class Holder {
+        val expr: Expr
+            get() = if (Math.random() > 0.5) Num(1) else Sum(Num(1), Num(2))
+    }
+    
+    fun evalHolder(holder: Holder): Int {
+        if (holder.expr is Num) {
+            return holder.expr.value // smart cast is impossible!
+        }
+        return 0
+    }
+    ```
+- There is a simpler example: a property in an arbitrary class.
+  ```
+  val x: Expr
+      get() = Num(1)
+  ```
+  - Well, in this simple case, the getter always `Num(1)`, and thus it seems safe to do the smart cast.
+  - However, note that the compiler generally cannot prove that the logic inside a custom getter always return the same value.
+  - A custom getter (accessor) itself means that:
+    - it may be recomputed whenever the property is accessed;
+    - the getter may return a different object each time;
+    - evaluating the getter may produce side effects.
+  - In conclusion, the property must not have any custom accessor if you wanna utilize smart cast!
+
+#### How can we safely leverage smart casts?
+The solution is:
+```text
+Make use of local variable!
+```
+
+There is an example:
+```kotlin
+fun evalHolder(holder: Holder): Int {
+    val expr = holder.expr
+
+    if (expr is Num) {
+        return expr.value
+    }
+
+    return 0
+}
+```
+  - Here, the target of the smart cast is not `holder.expr` but the local variable `expr`!
+  - `expr` is `val` and does not vary in the function block.
+  - That's why the smart casting for `expr` is possible.
