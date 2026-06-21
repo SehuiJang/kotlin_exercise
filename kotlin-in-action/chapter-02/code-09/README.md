@@ -18,7 +18,7 @@ C:/path/to/your/kotlinc ./example/colors.kt ./example/example.kt -include-runtim
 
 ## What is the subject of `when`?
 ```
-The subject of a when expression is the value that when uses to decide which branch to execute.
+The subject of a when expression is the value that the when expression uses to decide which branch to execute.
 ```
 That is, in a `when` expression, the subject is the value being checked against the branch conditions.
 
