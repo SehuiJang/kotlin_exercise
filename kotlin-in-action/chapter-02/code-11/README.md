@@ -17,7 +17,30 @@ C:/path/to/your/kotlinc ./example/colors.kt ./example/example.kt -include-runtim
 ```
 
 ## Notes on the code
+```kotlin
+package ch02.colors
+import ch02.colors.Color.*
 
+fun mixOptimized(c1: Color, c2: Color) =
+    when {  // It has no subject!
+        // The conditions of the below branches are evaluated as "Boolean expressions".
+        (c1 == RED && c2 == YELLOW) ||
+        (c1 == YELLOW && c2 == RED) ->
+            ORANGE
+        (c1 == YELLOW && c2 == BLUE) ||
+        (c1 == BLUE && c2 == YELLOW) ->
+            GREEN
+        (c1 == BLUE && c2 == VIOLET) ||
+        (c1 == VIOLET && c2 == BLUE) ->
+            INDIGO
+        else -> throw Exception("Dirty color")
+}
+
+fun main() {
+    println(mixOptimized(BLUE, YELLOW))
+    // GREEN
+}
+```
 
 - In [code-10](https://github.com/SehuiJang/kotlin_exercise/tree/main/kotlin-in-action/chapter-02/code-10), there is a subject of `when` in the form of a `Set` instance of two `Color` enum constants.
   - And the subject is just used only to check whether it matches the branch conditions.
