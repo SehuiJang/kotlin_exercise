@@ -10,8 +10,29 @@ In this code, we want to encode (i.e., express) an expression (i.e., mathematica
 - `(1 + 2) + 4`
 - You can utilize an marker interface `interface` and smart casts.
 
-```
-(required to paste a source code)
+```kotlin
+interface Expr
+class Num(val value: Int) : Expr
+class Sum(val left: Expr, val right: Expr) : Expr
+
+// block-body function
+fun eval(e: Expr): Int {
+    if (e is Num) {	// Type check
+        // The below explicit cast is possible but not needed, considering smart cast.
+        val n = e as Num
+        return n.value
+    }
+    if (e is Sum) {	// Type check
+        // In this block, `e` is a smart-cast value.
+        return eval(e.right) + eval(e.left)	// In IDE such as IntelliJ IDEA and Android Studio, `e` in this line will be highlighted!
+    }
+    throw IllegalArgumentException("Unknown expression")
+}
+
+fun main() {
+    println(eval(Sum(Sum(Num(1), Num(2)), Num(4))))
+    // 7
+}
 ```
 
 ## Defining a *marker interface*, using `interface`
@@ -105,17 +126,23 @@ Well, the explicit cast (manual cast) is also possible but not required:
 - The type of `e` is checked as `Num` in the 1st `if` branch.
   - In the block, explicit cast is not impossible. You can do it.
   - Even so, it is not necessary in Kotlin, owing to smart cast.
-    ```
+    ```kotlin
     if (e is Num) {	// Type check
-        val n = e as Num
+        val n = e as Num  // Unnecessary cast
         return n.value
     }
+    ```
+  - In my case, due to `val n = e as Num`, I encountered a warning:
+    ```bash
+    example.kt:9:19: warning: no cast needed.
+        val n = e as Num
+                  ^^^^^^
     ```
 - The type of `e` is checked as `Sum` in the 2nd `if` branch.
   - Then, the compiler takes the cast for you.
   - Accordingly, you can use `e` as `Sum` object in the block **without the explicit cast**!!
   - On a side note, the smart-cast value `e` in this block will be highlighted when you use IDE such as IntelliJ IDEA and Android Studio!
-    ```
+    ```kotlin
     if (e is Sum) {	// Type check
         // In this block, `e` is a smart-cast value.
         return eval(e.right) + eval(e.left)
@@ -173,7 +200,7 @@ For properties with their custom accessors, reading the properties can produce a
     }
     ```
 - There is a simpler example: a property in an arbitrary class.
-  ```
+  ```kotlin
   val x: Expr
       get() = Num(1)
   ```
