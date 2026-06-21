@@ -104,9 +104,12 @@ fun eval(e: Expr): Int {
 Look at the example below:
 ```kotlin
 interface Expr
-class Num(val value: Int) : Expr  // Num is Expr!
-class Sum(val left: Expr, val right: Expr) : Expr  // Sum is Expr!
-class Person(val name: String)  // It is not related to Expr!!!
+// Num is Expr!
+class Num(val value: Int) : Expr
+// Sum is Expr!
+class Sum(val left: Expr, val right: Expr) : Expr
+// It is not related to Expr!!!
+class Person(val name: String)  
 ```
 - A class becomes related to an interface only when the interface is explicitly specified at the end of the class declaration, as in `: Expr`.
   - `class Num(val value: Int) : Expr` &rarr; `Num` is `Expr`.
