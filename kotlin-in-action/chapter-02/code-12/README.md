@@ -155,7 +155,7 @@ Briefly, smart cast works only when the compiler can be sure that the value rema
 
 Technically, remember that:
 ```text
-All properties of the class must be declared as val,
+All properties of the class must be declared as val, 
 and none of them must have custom accessors.
 ```
 
