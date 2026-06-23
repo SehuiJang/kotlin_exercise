@@ -2,7 +2,7 @@
 - Chapter 2.4.3 Iterating over maps (2/e version)  
 
 # What did I look?
-- `for` loops which iterates over a list, a map, and a list with an index.
+- `for` loops which iterates over a list, a map, and a list with indices.
 - The index starts from 0 just as with Python!
 
 # Codes
