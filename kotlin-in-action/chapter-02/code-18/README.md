@@ -45,7 +45,7 @@ fun main() {
 
 - You can use `in` and `!in` as branch conditions in `when` expression!
 
-## `..` is available for any class that implement the `kotlin.Comparable` interface!
+## `..` is available for any classes that implement the `kotlin.Comparable` interface!
 The `..` operator is widely usable than you think!
 
 ```kotlin
