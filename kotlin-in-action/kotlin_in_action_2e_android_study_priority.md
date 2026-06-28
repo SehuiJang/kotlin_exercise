@@ -3,7 +3,7 @@ This document is written by ChatGPT 5.5 thinking extented, based on the table of
 Technically, titles of all chapters in TOC are used to produce this document.  
 **Therefore, there may be inaccuracies, so it is recommended to view this document just as a reference document.**
 
-## The perspective from which this document was written
+## The perspective from which this document is written
 This document is written from the perspective of **Kotlin Android development**.  
 That is, priority of each chapter is evaluated based on this perspective.
 
