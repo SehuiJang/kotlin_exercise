@@ -67,7 +67,7 @@ fun main() {
 ```
 
 # When it comes to `.javaClass`
-## Is `.javaClass` available for classes from Java?
+## Is `.javaClass` only available for classes from Java?
 **`.javaClass` is NOT limited to class that come from Java.**  
 On **Kotlin/JVM**, it can be used with any object running on the JVM!  
 This means that:
