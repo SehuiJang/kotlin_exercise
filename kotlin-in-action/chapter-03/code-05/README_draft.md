@@ -3,7 +3,7 @@
 - Chapter 3.3.1 Imports and extension functions (2/e version)  
 
 # What did I look?
-- An *extension function*: a function which can be invoked as a member of a class, being defined outside of it.
+- An *extension function*: a function which can be invoked as a member of a class, being defined outside of the class.
 
 
 # Codes
