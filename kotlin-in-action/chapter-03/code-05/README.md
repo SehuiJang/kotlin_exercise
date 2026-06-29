@@ -83,7 +83,6 @@ fun User.printPassword() {
   - The same applies to members (i.e., methods).
 
 ### Note
-The same goes for methods.
 | The kind of Property                | Possible to access from Extension function? |
 | -------------------------- | --------------------------: |
 | `public val name`          |                          Possible |
@@ -91,6 +90,7 @@ The same goes for methods.
 | `private val password`     |                         Impossible |
 | `protected val secretName` |         Impossible in general top-level extension functions |
 | `internal val id`          |              Possible in the same module |
+The same goes for methods.
 
 # Misc.
 ## The term *method*
