@@ -90,6 +90,7 @@ fun User.printPassword() {
 | `private val password`     |                         Impossible |
 | `protected val secretName` |         Impossible in general top-level extension functions |
 | `internal val id`          |              Possible in the same module |
+
 The same goes for methods.
 
 # Misc.
