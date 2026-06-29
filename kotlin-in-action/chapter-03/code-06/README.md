@@ -1,5 +1,6 @@
 # What chapter in 'Kotlin in Action'?
-- Chapter 3.3.1 Imports and extension functions (2/e version)  
+- Chapter 3.3.1 Imports and extension functions (2/e version)
+- Chapter 3.3.2 Calling extension functions from Java (2/e version)
 
 # What did I look?
 - You can import extension functions from other package.
