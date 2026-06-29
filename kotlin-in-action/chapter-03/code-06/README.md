@@ -4,7 +4,7 @@
 # What did I look?
 - You can import extension functions from other package.
   - By using `as`, you can change the class name or function name which you are importing. (As in Python)
-
+- The method to call extension functions from Java.
 
 
 # Codes
