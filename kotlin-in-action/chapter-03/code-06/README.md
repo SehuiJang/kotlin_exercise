@@ -70,7 +70,7 @@ char c = StringUtilKt.lastChar("Java");
 - `StringUtil.kt` has a declaration of `String.lastChar()`
   - That means:
     ```text
+    "When you call it in Java,"
     1. the type of the first argument is `String`
     2. it is equal to the receiver type
-    when you call it in Java.
     ```
