@@ -71,6 +71,6 @@ char c = StringUtilKt.lastChar("Java");
   - That means:
     ```text
     "When you call it in Java,"
-    1. the type of the first argument is `String`
-    2. it is equal to the receiver type
+    the type of the first argument is `String`,
+    and it is equal to the receiver type
     ```
