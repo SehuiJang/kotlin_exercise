@@ -18,7 +18,7 @@ Extension properties do NOT have any state, any backing field!
 
 
 # Codes
-## Extension property (immutable & mutable)
+## Extension property (read-only & mutable)
 ```kotlin
 /* Kotlin */
 // read-only extension property
